@@ -1,0 +1,128 @@
+/* .ct_login_logo img {
+    width: 353px;
+    height: 83px;
+    margin-bottom: 40px;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    border-radius: 5px;
+}
+
+.btn-primary {
+    border-radius: 5px;
+}
+
+.text-danger {
+    font-size: 0.875rem;
+
+}
+
+.active {
+    background-color: #ebdede;
+ 
+    color: #fff;
+
+    border-radius: 0px;
+}
+
+.ct_login_custom_tab {
+    justify-content: center;
+    border-bottom: 0px;
+}
+
+.ct_login_custom_tab {
+    gap: 10px;
+}
+
+.ct_login_custom_tab li.nav-item.active {
+    background-color: #e65f2b;
+
+}
+
+.ct_login_custom_tab li.nav-item a {
+    color: #000;
+}
+
+.ct_login_custom_tab li.nav-item.active a {
+    color: #fff;
+}
+
+.ct_back_project_btn {
+    padding: 14px;
+    border-radius: 10px;
+    overflow: hidden;
+    font-weight: 700;
+    background-color: transparent;
+    border: none;
+    margin-left: 27px;
+    margin-top: 5px;
+} */
+
+.ct_custom_btm_cont {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    background-color: #C44463;
+    border:1px solid #C44463 !important;
+    padding: 1em 2em;
+    border: none;
+    border-radius: .6rem;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .ct_mobile_width{
+    max-width: 500px;
+    margin-inline: auto;
+  }
+  
+
+  .mt-55 {
+    margin-top: 12rem !important;
+}
+
+.ct_overflow_scroll {
+    overflow-y: auto;
+    height: auto;
+    max-height: 395px;
+}
+.ct_btn_btm_fixed{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    /* width: 100%; */
+    right: 0px;
+    margin-inline: 30px;
+
+}

@@ -1,0 +1,80 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "../node_modules/ngx-toastr/toastr.css";
+
+*{
+  box-sizing: border-box;
+ 
+}
+body{
+  overflow-x: hidden;
+}
+.invalid-feedback {
+    color: red; /* Change the color to red */
+  }
+
+  .error-message {
+    color: red;
+  }
+
+  .ct_back_project_btn {
+    background-color: #eee !important;
+    color: #000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 19px;
+}
+  
+.ct_mobile_width{
+  max-width: 500px;
+  margin-inline: auto;
+  position: relative;
+}
+  .ct_custom_btm {
+    font-weight: bold;
+    color: white;
+    background-color: var(--blue);
+    border:1px solid var(--blue) !important;
+    padding: 12px 2em;
+    border: none;
+    border-radius: .6rem;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    display: block;
+ 
+    width: 100%;
+    transition: 0.4s ease all;
+    z-index: 1;
+}
+.ct_task_list_dtl h3{
+  font-size: 22px;
+  font-weight: 700;
+}
+.ct_custom_btm:before,.ct_custom_btm_cont:before{
+  content: "";
+  position: absolute;
+  left: 0px;
+  width: 0%;
+  height: 100%;
+  background-color: #fff;
+  z-index: -1;
+  transition: 0.4s ease all;
+  top: 0px;
+}
+.ct_custom_btm_cont{
+  z-index: 1;
+}
+.ct_custom_btm:hover,.ct_custom_btm_cont:hover{
+  color: #000 !important;
+}
+
+.ct_custom_btm:hover:before,.ct_custom_btm_cont:hover:before{
+width: 100%;
+}
+
+.mt-55 {
+  margin-top: 12rem !important;
+}
