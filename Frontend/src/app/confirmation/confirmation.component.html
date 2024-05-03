@@ -1,0 +1,55 @@
+<app-header></app-header>
+
+
+<div class="mt-5">
+    <div class="">
+        <div class="ct_mobile_width" style="margin: auto;">
+            <div class="ct_task_list_dtl px-3" style="height: 80vh;">
+            <h3 class="mt-5">Confirmation:</h3>
+            <p>If the task have been
+                completed, Select
+                to update task status.</p>
+
+            <div class="ct_btn_btm_fixed" [hidden]="showSecondDiv">
+                <div class="mt-55 d-block">
+                    <button type="submit" (click)="cancle()" class="ct_custom_btm" style="background-color: transparent;
+                    color: blue; border: 1px solid;">
+                      Cancel
+                    </button>
+                </div>
+
+                <div class="mt-3 d-block">
+                    <button type="submit" class="ct_custom_btm_cont" (click)="submitConfirm()">
+                        Confirm
+                    </button>
+                </div>
+            </div>
+
+            <div [hidden]="!showSecondDiv" class="ct_btn_btm_fixed">
+                <div class="mt-55 d-block">
+                    <button type="submit" class="ct_custom_btm" style="background-color: transparent;
+                    color: blue; border: 1px solid;" style="background-color: #AFAFAF; color: black;"
+                        (click)="logout()">
+                     
+                        Off Duty
+                    </button>
+                </div>
+
+                <p class="text-center my-3"><strong>- OR -</strong></p>
+
+                <div class=" d-block">
+                    <button type="submit" class="ct_custom_btm_cont " routerLink="/map">
+                        Continue
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+</div>
+
+<div style="text-align: center;">
+    <ngx-loading [show]="loading"
+        [config]="{ animationType: 'circle-swish', primaryColour: '#007bff', backdropBorderRadius: '4px' }"></ngx-loading>
+</div>

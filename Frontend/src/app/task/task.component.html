@@ -1,0 +1,43 @@
+<app-header></app-header>
+
+<div class="mt-5">
+    <div class="">
+        <div class="ct_mobile_width" style="margin: auto;">
+            <div class="ct_task_list_dtl  px-3" style="height: 80vh;">
+                <div class="ct_overflow_scroll">
+               
+            <h3>Instruction:</h3>
+            <!-- <p class="mb-0">{{ desc }}</p> -->
+
+            <div [innerHTML]="desc"></div>
+
+            <h3 class="mt-5">Client Contact Info:</h3>
+            <!-- <p class="mb-0" (click)="openMap()">{{googleMapsUrl}}</p> -->
+            <a href="{{ googleMapsUrl }}" target="_blank">{{ address }}</a>
+        </div>
+
+            <div [hidden]="showSecondDiv">
+                <div class=" d-block ct_btn_btm_fixed" (click)="submitAccept()">
+                    <button type="submit" class="ct_custom_btm">
+                        Accept
+                    </button>
+                </div>
+            </div>
+
+            <div class="ct_btn_btm_fixed" [hidden]="!showSecondDiv">
+                <div class=" d-block" (click)="continue()">
+                    <button type="submit" class="ct_custom_btm_cont">
+                        Complete
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+</div>
+
+<div style="text-align: center;">
+    <ngx-loading [show]="loading"
+        [config]="{ animationType: 'circle-swish', primaryColour: '#007bff', backdropBorderRadius: '4px' }"></ngx-loading>
+</div>

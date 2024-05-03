@@ -1,0 +1,133 @@
+<body>
+    <section class="ct_login_main_div">
+        <div class="container-fluid px-0">
+         <div class="row">
+            <div class="col-md-12">
+                <div class="ct_mobile_width px-3 py-5" style="margin: auto;">
+                    <div class="">
+                        <div class="d-flex align-items-center flex-wrap justify-content-between mb-5 gap-3">
+                            <a routerLink="/map" class=" ct_back_project_btn">
+                                <i class="fa-solid fa-angle-left"></i>Back
+                            </a>
+                            <div class="ct_login_logo mx-auto d-block text-center mb-0">
+                                <img src="assets/img/run_logo.png" alt="" class="mb-0">
+                            </div>
+                        </div>
+                        
+        
+                        <form [formGroup]="profileForm" (ngSubmit)="submit()">
+                            <div class="ct_input-group mb-4">
+                                <input required="" type="text" name="text" autocomplete="off" formControlName="name"
+                                    class="ct_input">
+                                <label class="ct_user-label">Name <span class="ct_required_star">*</span></label>
+                                <div *ngIf="profileForm.controls['name'].invalid && profileForm.controls['name'].touched"
+                                    class="error-message">
+                                    <div *ngIf="profileForm.controls['name'].errors?.['required']">Name is
+                                        required.
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="ct_input-group mb-4">
+                                <input required="" type="email" name="text" autocomplete="off"
+                                    formControlName="email" class="ct_input">
+                                <label class="ct_user-label">Email <span class="ct_required_star">*</span></label>
+                                <div *ngIf="profileForm.controls['email'].invalid && profileForm.controls['email'].touched"
+                                    class="error-message">
+                                    <div *ngIf="profileForm.controls['email'].errors?.['required']">Email is
+                                        required.
+                                    </div>
+                                    <div
+                                        *ngIf="profileForm.controls['email'].errors?.['email'] && !profileForm.controls['email'].errors?.['required']">
+                                        Invalid email format.</div>
+                                </div>
+                            </div>
+        
+                            <div class="ct_input-group mb-4">
+                                <input required="" type="text" name="text" autocomplete="off"
+                                    formControlName="number" class="ct_input">
+                                <label class="ct_user-label">Number </label>
+                                <!-- <div *ngIf="profileForm.controls['number'].invalid && profileForm.controls['number'].touched"
+                                    class="error-message">
+                                    <div *ngIf="profileForm.controls['number'].errors?.['required']">Name is
+                                        required.
+                                    </div>
+                                </div> -->
+                            </div>
+        
+                            <div class="ct_input-group mb-4 position-relative">
+                                <input required type="{{ isPasswordVisible ? 'text' : 'password' }}" name="text"
+                                    autocomplete="off" formControlName="password" class="ct_input">
+                                <label class="ct_user-label">Password </label>
+                                <i class="fa-regular ct_hide_pass_wye"
+                                    [ngClass]="isPasswordVisible ? 'fa-eye' : 'fa-eye-slash' "
+                                    (click)="togglePasswordVisibility()"></i>
+                                <!-- <div *ngIf="profileForm.controls['password'].invalid && profileForm.controls['password'].touched"
+                                    class="error-message">
+                                    <div *ngIf="profileForm.controls['password'].errors?.['required']">Password
+                                        is
+                                        required.</div>
+                                </div> -->
+                            </div>
+        
+                            <div class="ct_input-group mb-4 position-relative">
+                                <input required type="{{ isPasswordVisible1 ? 'text' : 'password' }}" name="text"
+                                    autocomplete="off" formControlName="confirm_password" class="ct_input">
+                                <label class="ct_user-label">Confirm Password </label>
+                                <i class="fa-regular ct_hide_pass_wye"
+                                    [ngClass]="isPasswordVisible1 ? 'fa-eye' : 'fa-eye-slash' "
+                                    (click)="togglePasswordVisibility1()"></i>
+                                <!-- <div *ngIf="profileForm.controls['confirm_password'].invalid && profileForm.controls['confirm_password'].touched"
+                                    class="error-message">
+                                    <div *ngIf="profileForm.controls['confirm_password'].errors?.['required']">
+                                        Password is
+                                        required.</div>
+                                    <div
+                                        *ngIf="passwordMismatch && !profileForm.controls['confirm_password'].errors?.['required']">
+                                        Passwords do not match.</div>
+                                </div> -->
+        
+                                <!-- <div *ngIf="form.controls['confirm_password']?.invalid && form.controls['confirm_password'].touched"
+                                    class="error-message">
+                                    <div *ngIf="form.controls['confirm_password'].errors?.['required']">This
+                                        field is required.</div>
+                                    <div
+                                        *ngIf="passwordMismatch && !form.controls['confirm_password'].errors?.['required']">
+                                        Passwords do not match.</div>
+                                </div> -->
+        
+                            </div>
+        
+                            <!-- <div class="ct_remember_text">
+                                <div class="ct_forgot_link" style="cursor: pointer;">
+                                    <a (click)="toggleSecondDiv()">Forgot Password?</a>
+                                </div>
+                            </div> -->
+        
+        
+                            <div class="mt-4 d-block">
+                                <button type="submit" class="ct_custom_btm">
+                                    <span class="circle1"></span>
+                                    <span class="circle2"></span>
+                                    <span class="circle3"></span>
+                                    <span class="circle4"></span>
+                                    <span class="circle5"></span>
+                                    <span class="text">Update</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+         </div>
+               
+        </div>
+    </section>
+</body>
+
+
+<div style="text-align: center;">
+    <ngx-loading [show]="loading"
+        [config]="{ animationType: 'circle-swish', primaryColour: '#007bff', backdropBorderRadius: '4px' }"></ngx-loading>
+</div>

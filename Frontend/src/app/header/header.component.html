@@ -1,0 +1,22 @@
+<div class="ct_dashboard_head">
+    <div class="d-flex align-items-center gap-4 flex-wrap">
+      <div class="d-flex align-items-center gap-3 ct_login_logo">
+        <img src="assets/img/run_logo.png" alt="img" />
+      </div>
+    </div>
+    <div class="dropdown ct_custom_drop_12">
+      <button class="ct_logout_btn ct_white_btn  dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        <img src="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png" alt="">
+        <div class="ct_user_name_info">
+          <h5>{{name}}</h5>
+          <p class="mb-0"></p>
+        </div>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" routerLink="/update-profile">Profile</a></li>
+        <!-- <li><a class="dropdown-item" routerLink="/change-password">Change Password</a></li> -->
+        <li><a class="dropdown-item" (click)="logout()" >Log Out</a></li>
+      </ul>
+    </div>
+  </div>

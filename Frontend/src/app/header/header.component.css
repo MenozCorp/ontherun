@@ -1,0 +1,42 @@
+.ct_dashboard_head h5 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+button.ct_logout_btn {
+    border-radius: 100px;
+    border-color: transparent;
+    /* width: 125px; */
+}
+.ct_custom_drop_12 ul.dropdown-menu {
+   transition: 0.4s ease all;
+}
+.ct_custom_drop_12 ul.dropdown-menu.show {
+    padding: 0px;
+    border: 0px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 25px rgba(0,0,0,0.09);
+    max-width: 200px;
+    width: 100%;
+    min-width: 200px;
+}
+.ct_custom_drop_12 .dropdown-item:active,.ct_custom_drop_12 .dropdown-item:hover,.ct_custom_drop_12 .dropdown-item:focus{
+background-color: #e65f2b;
+color: #fff;
+}
+
+
+.ct_login_logo img {
+    width: 153px;
+    height: 43px;
+}
+
+.ct_dashboard_head {
+    border-bottom: 1px solid rgb(0 0 0 / 8%);
+    padding: 10px 30px;
+}
+
+button.ct_logout_btn.ct_white_btn{
+    background-color: #eee !important;
+}

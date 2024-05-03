@@ -1,0 +1,113 @@
+<body>
+    <section class="ct_login_main_div">
+        <div class="container-fluid px-0">
+            <div class="ct_login_left_bg">
+                <div class="row align-items-center">
+                    <div class="col-md-5" style="margin: auto;">
+                        <div class="ct_login_right_form w-60 mx-3 ">
+
+                            <div class="ct_login_logo mx-auto d-block text-center mb-4">
+                                <img src="assets/img/run_logo.png" alt="">
+                            </div>
+                            <div [hidden]="showSecondDiv">
+                                <form [formGroup]="loginForm" (ngSubmit)="login()">
+                                    <div class="ct_input-group mb-4">
+                                        <input required="" type="email" name="text" autocomplete="off"
+                                            formControlName="email" class="ct_input">
+                                        <label class="ct_user-label">Email <span
+                                                class="ct_required_star">*</span></label>
+                                        <div *ngIf="loginForm.controls['email'].invalid && loginForm.controls['email'].touched"
+                                            class="error-message">
+                                            <div *ngIf="loginForm.controls['email'].errors?.['required']">Email is
+                                                required.
+                                            </div>
+                                            <div
+                                                *ngIf="loginForm.controls['email'].errors?.['email'] && !loginForm.controls['email'].errors?.['required']">
+                                                Invalid email format.</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="ct_input-group mb-4 position-relative">
+                                        <input required type="{{ isPasswordVisible ? 'text' : 'password' }}" name="text"
+                                            autocomplete="off" formControlName="password" class="ct_input">
+                                        <label class="ct_user-label">Password <span
+                                                class="ct_required_star">*</span></label>
+                                        <i class="fa-regular ct_hide_pass_wye"
+                                            [ngClass]="isPasswordVisible ? 'fa-eye' : 'fa-eye-slash' "
+                                            (click)="togglePasswordVisibility()"></i>
+                                        <div *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched"
+                                            class="error-message">
+                                            <div *ngIf="loginForm.controls['password'].errors?.['required']">Password is
+                                                required.</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="ct_remember_text">
+                                        <div class="ct_forgot_link" style="cursor: pointer;">
+                                            <a (click)="toggleSecondDiv()">Forgot Password?</a>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="mt-4 d-block">
+                                        <button type="submit" class="ct_custom_btm">
+                                            <span class="circle1"></span>
+                                            <span class="circle2"></span>
+                                            <span class="circle3"></span>
+                                            <span class="circle4"></span>
+                                            <span class="circle5"></span>
+                                            <span class="text">Login</span>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div [hidden]="!showSecondDiv">
+                                <form [formGroup]="passwordForm" (ngSubmit)="onSubmit()">
+                                    <div class="ct_input-group mb-4">
+                                        <input required="" type="email" name="text" autocomplete="off"
+                                            formControlName="email" class="ct_input">
+                                        <label class="ct_user-label">Email <span
+                                                class="ct_required_star">*</span></label>
+                                        <div *ngIf="passwordForm.controls['email'].invalid && passwordForm.controls['email'].touched"
+                                            class="error-message">
+                                            <div *ngIf="passwordForm.controls['email'].errors?.['required']">Email is
+                                                required.
+                                            </div>
+                                            <div
+                                                *ngIf="passwordForm.controls['email'].errors?.['email'] && !passwordForm.controls['email'].errors?.['required']">
+                                                Invalid email format.</div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="ct_remember_text justify-content-center">
+                                        <div class="ct_forgot_link" style="cursor: pointer;">
+                                            <a (click)="toggleSecondDiv()">Back to login</a>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="mt-4 d-block">
+                                        <button type="submit" class="ct_custom_btm">
+                                            Submit
+                                        </button>
+                                    </div>
+
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+
+<div style="text-align: center;">
+    <ngx-loading [show]="loading"
+        [config]="{ animationType: 'circle-swish', primaryColour: '#007bff', backdropBorderRadius: '4px' }"></ngx-loading>
+</div>
